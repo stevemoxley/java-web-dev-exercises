@@ -1,6 +1,5 @@
-package org.launchcode.java.restaurantMenu;
+package org.launchcode.java.studios.restaurantMenu;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MenuItem {
