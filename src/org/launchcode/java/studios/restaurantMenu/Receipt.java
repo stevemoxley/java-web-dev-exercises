@@ -1,39 +1,41 @@
 package org.launchcode.java.studios.restaurantMenu;
 
+import org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem;
+
 import java.util.ArrayList;
 
 public class Receipt {
-    final int _orderNumber;
-    private double _total;
-    private ArrayList<MenuItem> _orderItems;
+    final int orderNumber;
+    private double total;
+    private ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> orderItems;
 
 
-    public Receipt(int orderNumber, ArrayList<MenuItem> orderItems)
+    public Receipt(int orderNumber, ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> orderItems)
     {
-        _orderNumber = orderNumber;
+        this.orderNumber = orderNumber;
 
-        for (MenuItem orderItem: orderItems)
+        for (org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem orderItem: orderItems)
         {
-            _total += orderItem.getCost();
+            total += orderItem.getCost();
         }
 
-        _orderItems = orderItems;
+        this.orderItems = orderItems;
     }
 
     public void printReceipt(){
 
-        System.out.println(_orderNumber);
+        System.out.println("Order #"+orderNumber);
 
-        for (MenuItem orderItem: _orderItems)
+        for (MenuItem orderItem: orderItems)
         {
-            System.out.println(orderItem.getDescription());
+            System.out.println(orderItem.getName() + " $"+ orderItem.getCost());
         }
 
-        System.out.println(_total);
+        System.out.println("Grand total:" + total);
     }
 
     public double getTotal(){
-        return _total;
+        return total;
     }
 
 }
