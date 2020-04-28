@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Receipt {
     final int _orderNumber;
     private double _total;
-    ArrayList<MenuItem> _orderItems;
+    private ArrayList<MenuItem> _orderItems;
 
 
     public Receipt(int orderNumber, ArrayList<MenuItem> orderItems)
@@ -14,7 +14,7 @@ public class Receipt {
 
         for (MenuItem orderItem: orderItems)
         {
-            _total += orderItem.cost;
+            _total += orderItem.getCost();
         }
 
         _orderItems = orderItems;
@@ -26,7 +26,7 @@ public class Receipt {
 
         for (MenuItem orderItem: _orderItems)
         {
-            System.out.println(orderItem.description);
+            System.out.println(orderItem.getDescription());
         }
 
         System.out.println(_total);
