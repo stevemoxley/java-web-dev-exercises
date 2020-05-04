@@ -7,14 +7,14 @@ import java.util.ArrayList;
 public class Receipt {
     final int orderNumber;
     private double total;
-    private ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> orderItems;
+    private ArrayList<MenuItem> orderItems;
 
 
-    public Receipt(int orderNumber, ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> orderItems)
+    public Receipt(int orderNumber, ArrayList<MenuItem> orderItems)
     {
         this.orderNumber = orderNumber;
 
-        for (org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem orderItem: orderItems)
+        for (MenuItem orderItem: orderItems)
         {
             total += orderItem.getCost();
         }

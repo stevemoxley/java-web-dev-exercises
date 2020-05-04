@@ -12,10 +12,10 @@ public class MenuItem {
     private String name;
     private String description;
     private Boolean isNew;
-    private org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.Category category;
+    private Category category;
     private ArrayList<FoodItem> ingredients;
 
-    public MenuItem(String name, String description, float cost, org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.Category category)
+    public MenuItem(String name, String description, float cost, Category category)
     {
         this.name = name;
         this.description = description;

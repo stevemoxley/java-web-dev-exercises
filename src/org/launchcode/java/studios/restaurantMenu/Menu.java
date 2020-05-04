@@ -8,9 +8,9 @@ import java.util.Date;
 public class Menu {
     private String name;
     private Date lastModified;
-    private ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> menuItems;
+    private ArrayList<MenuItem> menuItems;
 
-    public Menu(String name, Date lastModified, ArrayList<org.launchcode.java.studios.restaurantMenuNew.restaurantMenu.MenuItem> menuItems){
+    public Menu(String name, Date lastModified, ArrayList<MenuItem> menuItems){
         this.name = name;
         this.lastModified = lastModified;
         this.menuItems = menuItems;
