@@ -17,11 +17,24 @@ public class Menu {
     }
 
     public void print(){
-        System.out.println(name);
-        System.out.println("Last Modified: "+ lastModified.toString());
-        for (MenuItem menuItem: menuItems ) {
-            System.out.println(menuItem.getName() + ": " + menuItem.getDescription()+ " $"+menuItem.getCost());
-        }
+        System.out.println(this);
     }
+
+    @Override
+    public String toString() {
+        String result = name + "\r\n";
+
+        result += "Last Modified: " + lastModified.toString() + "\r\n";
+        for (MenuItem menuItem: menuItems ) {
+            result += menuItem;
+        }
+
+        return result;
+    }
+
+    public Date getLastModified(){
+        return lastModified;
+    }
+
 
 }

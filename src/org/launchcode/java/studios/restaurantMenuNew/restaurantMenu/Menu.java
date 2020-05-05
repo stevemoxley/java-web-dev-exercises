@@ -18,16 +18,26 @@ public class Menu {
         System.out.println(name);
         System.out.println("Last Modified: "+ lastModified.toString());
         for (MenuItem menuItem: menuItems ) {
-            System.out.println(menuItem.getName() + ": " + menuItem.getDescription()+ " $"+menuItem.getCost());
+            System.out.println(menuItem);
         }
+    }
+
+    public void addMenuItem(MenuItem menuItem){
+        menuItems.add(menuItem);
+    }
+
+    public void deleteMenuItem(int index){
+        menuItems.remove(index);
     }
 
     public MenuItem getMenuItem(int index){
         return menuItems.get(index);
     }
 
-    public void deleteMenuItem(int index){
-        menuItems.remove(index);
+
+
+    public Date getLastModified(){
+        return lastModified;
     }
 
 }

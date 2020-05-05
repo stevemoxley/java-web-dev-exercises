@@ -36,8 +36,23 @@ public class MenuItem {
 
     public String getName() { return name; }
 
-    public String getIsNew() { return isNew.toString(); }
+    public Boolean getIsNew() { return isNew; }
 
     public Category getCategory() { return category;  }
 
+    @Override
+    public String toString() {
+        return getName() + ": " + getDescription()+ " $"+ getCost();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        MenuItem menuItem = (MenuItem) obj;
+
+        if(menuItem == null){
+            return false;
+        }
+
+        return this.name.toLowerCase().equals(menuItem.name.toLowerCase());
+    }
 }
